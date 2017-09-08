@@ -634,6 +634,8 @@ int init_cam(RASPIVID_STATE *state)
 
    bcm_host_init();
    get_status(state);
+   state->camera_parameters.rotation = 180;
+
    // Register our application with the logging system
    vcos_log_register("RaspiVid", VCOS_LOG_CATEGORY);
 
